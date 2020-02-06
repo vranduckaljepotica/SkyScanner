@@ -1,0 +1,32 @@
+{
+  "name": "skyscanner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nightwatch -c nightwatch.conf.js",
+    "test:cucumber": "cucumber-js --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty",
+    "test-cucumber": "mkdirp report && cucumber-js --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty --format json:report/cucumber_report.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "^78.0.1",
+    "cucumber": "^6.0.5",
+    "cucumber-html-reporter": "^5.0.2",
+    "cucumber-pretty": "^6.0.0",
+    "mkdirp": "^0.5.1",
+    "nightwatch": "^1.3.4",
+    "nightwatch-api": "^3.0.1"
+  },
+  "dependencies": {
+    "browserstack-local": "^1.4.2",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
+    "handlebars": "^4.5.3",
+    "nightwatch-html-reporter": "^2.0.6",
+    "nightwatch-vrt": "^0.2.10",
+    "path": "^0.12.7"
+  }
+}
